@@ -39,13 +39,13 @@ It validates key user flows of [SauceDemo](https://www.saucedemo.com/) using:
 ```bash
 mvn test -DsuiteXmlFile=src/test/resources/testng.xml
 
-Run by group (e.g. regression):
+Run by group (e.g., regression):
 ```bash
 mvn test -Dgroups=regression
 
 Run Cucumber Tests
 ```bash
-mvn test -Dcucumber.filter.tags="@regression"
+mvn test -Dcucumber. filter.tags="@regression"
 
 ## 📊 Reporting
 The framework gives you two types of visual reports out of the box: one for TestNG and one for Cucumber.
