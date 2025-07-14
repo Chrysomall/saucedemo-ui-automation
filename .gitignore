@@ -42,6 +42,4 @@ target/
 *.iml
 *.class
 *.log
-/reports/
-/screenshots/
 /test-output/
