@@ -103,7 +103,7 @@
                         <version>3.0.0-M9</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/test-auth.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/testng-auth.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
