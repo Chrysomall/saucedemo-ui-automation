@@ -10,9 +10,9 @@
             </run>
         </groups>
         <packages>
-            <package name="tests.auth"/>
-            <package name="tests.checkout"/>
-            <package name="tests.navigation"/>
+            <package name="testng.tests.auth"/>
+            <package name="testng.tests.checkout"/>
+            <package name="testng.tests.navigation"/>
         </packages>
     </test>
 </suite>

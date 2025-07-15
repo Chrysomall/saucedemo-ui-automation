@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class DriverFactory {
 
     public static WebDriver initializeDriver() {
-        String browser = ConfigReader.get("browser");
+        String browser = System.getProperty("browser") != null ? System.getProperty("browser") : ConfigReader.get("browser");
         boolean isHeadless = Boolean.parseBoolean(ConfigReader.get("headless"));
         WebDriver driver;
 
@@ -23,7 +23,7 @@ public class DriverFactory {
                 chromeOptions.addArguments("--disable-infobars");
 
                 if (isHeadless) {
-                    chromeOptions.addArguments("--headless=new"); // modern headless mode
+                    chromeOptions.addArguments("--headless=new");
                     chromeOptions.addArguments("--window-size=1920,1080");
                 }
 

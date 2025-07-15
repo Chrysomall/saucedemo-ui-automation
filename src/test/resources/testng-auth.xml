@@ -1,24 +1,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="SauceDemo Test Suite" parallel="true">
+<suite name="Regression Suite">
     <listeners>
         <listener class-name="testng.components.Listeners"></listener>
     </listeners>
-    <test thread-count="5" name="Authentication Tests">
+    <test name="Regression Tests" parallel="false">
+        <groups>
+            <run>
+                <include name="auth"/>
+            </run>
+        </groups>
         <packages>
             <package name="testng.tests.auth"/>
-        </packages>
-    </test>
-
-    <test thread-count="3" name="Checkout Tests">
-        <packages>
             <package name="testng.tests.checkout"/>
-        </packages>
-    </test>
-
-    <test name="Navigation Tests">
-        <packages>
             <package name="testng.tests.navigation"/>
         </packages>
     </test>
-
 </suite>

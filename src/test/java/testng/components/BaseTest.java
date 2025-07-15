@@ -25,8 +25,13 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        driver.close();
-        driver.quit();
+        if (driver != null) {
+            try {
+                driver.quit();
+            } catch (org.openqa.selenium.WebDriverException e) {
+                System.out.println("Session already closed or not available: " + e.getMessage());
+            }
+        }
     }
 
     public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {

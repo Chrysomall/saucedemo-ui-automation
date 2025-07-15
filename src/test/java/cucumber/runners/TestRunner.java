@@ -5,6 +5,6 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/resources/features" ,glue = "cucumber.stepDefinitions",monochrome = true,
         plugin = {"html:target/cucumber.html"})
-public class TestNGRunner extends AbstractTestNGCucumberTests {
+public class TestRunner extends AbstractTestNGCucumberTests {
 
 }
