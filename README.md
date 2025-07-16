@@ -1,4 +1,5 @@
 # SauceDemo UI Automation Framework
+[![Build Status](https://6c3789560fb7.ngrok-free.app/job/saucedemo-ui-automation/badge/icon)](https://6c3789560fb7.ngrok-free.app/job/saucedemo-ui-automation/)
 
 A modular UI automation framework created for demonstration and portfolio use.
 
@@ -23,6 +24,8 @@ It validates key user flows of [SauceDemo](https://www.saucedemo.com/) using:
 | Reporting         | ExtentReports, Cucumber HTML |
 | Design Pattern    | Page Object Model (POM)      |
 | Data Handling     | TestNG DataProvider, HashMap |
+| CI Integration    | Jenkins                      |
+
 ---
 
 ## How to Run Tests
@@ -72,17 +75,6 @@ Report location: /reports/index.html
 Sample:
 ![ExtentReport Screenshot](reports/sample-testng-report.png)
 
-### Cucumber HTML Report
-
-If you run BDD scenarios, a separate **Cucumber HTML report** is created. It shows:
-
-- Feature and scenario breakdown
-- Step-by-step execution
-- Tag filtering
-- Highlighted Gherkin steps
-
-Report location:
-/reports/cucumber-report.html
 
 ### Screenshots on Failure
 
@@ -90,6 +82,19 @@ If a test fails, a screenshot is automatically captured and linked in the report
 
 Screenshot folder:
 /reports/screenshots/
+
+---
+
+### Jenkins Integration 
+This project is connected to Jenkins CI with:
+- GitHub webhook triggers on every push to main
+- Daily scheduled job using cron
+  
+Parameterized build support:
+- Select browser: -Dbrowser=chrome
+- Choose suite profile: -PRegression, -PSmoke, etc.
+
+ **CI Dashboard:** [View Jenkins Job](http://localhost:8080/job/saucedemo-ui-automation/)
 
 
 
