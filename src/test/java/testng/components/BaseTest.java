@@ -15,7 +15,6 @@ import java.io.IOException;
 public class BaseTest {
 
     protected WebDriver driver;
-//    protected ExtentReports extent;
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
