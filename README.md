@@ -10,6 +10,7 @@ It validates key user flows of [SauceDemo](https://www.saucedemo.com/) using:
 -  Cucumber for BDD scenarios
 -  Maven for build and dependency management
 -  ExtentReports and Cucumber HTML for reporting
+-  Jenkins CI – for automated test execution on Git push and scheduled runs
 
 ---
 
